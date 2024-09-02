@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loading-overlay">載入畫面中...</div>
+<div id="header" class="d-flex justify-content-end align-items-center p-3">
+    <div id="user-info" class="text-right mr-3"></div>
+    <button id="logout-button" class="btn btn-danger align-self-end">登出</button>
+</div>
+<div id="chat-container" class="container flex-column vh-100 d-flex">
+    <div id="chat-messages" class="flex-grow-1 overflow-auto p-3 bg-light rounded mt-3 position-relative">
+
+        <div id="preset-buttons" class="d-flex flex-column justify-content-center align-items-center position-absolute w-100 h-100 bg-light">
+            <button class="preset-btn btn btn-primary mb-3" data-message="Please recommend two laptops under NT$20,000 for me">Please recommend two laptops under NT$20,000 for me</button>
+            <button class="preset-btn btn btn-primary mb-3" data-message="I want to find the three most expensive computers.">I want to find the three most expensive computers.</button>
+            <button class="preset-btn btn btn-primary mb-3" data-message="Could you introduce me to a few laptops?">Could you introduce me to a few laptops?</button>
+            <button class="preset-btn btn btn-primary mb-3" data-message="I want to buy the most expensive appel">I want to buy the most expensive appel</button>
+        </div>
+    </div>
+
+    <div id="chat-input" class="input-group mt-3">
+        <input type="text" id="message-input" class="form-control" placeholder="Type your message...">
+        <div class="input-group-append">
+            <button id="send-button" class="btn btn-primary">送出</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="js/chat.js"></script>
+<div id="chat-content" style="display:none;">
+</div>
+</body>
+</html>
