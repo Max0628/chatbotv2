@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const message = messageInput.value.trim();
         if (message) {
             addMessage(message, 'user-message');
-            messageInput.value = ''; // 清空输入框
+            messageInput.value = '';
             try {
                 const response = await fetch('api/1.0/chat', {
                     method: 'POST',
@@ -102,9 +102,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
                 const data = await response.json();
 
-                // 保存从后端返回的 conversationId
+
                 if (!currentConversationId) {
-                    currentConversationId = data.conversationId; // 如果前端还没有 conversationId，则保存后端返回的 conversationId
+                    currentConversationId = data.conversationId;
                 }
 
                 if (data && data.aiResponse) {
